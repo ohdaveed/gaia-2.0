@@ -86,7 +86,7 @@ class Login extends Component {
                                 <label htmlFor="username">User Name</label>
                                 <span className="red-text">
                                     {errors.username}
-                                    {errors.username}
+                                    {errors.usernotfound}
                                 </span>
                             </div>
                             <div className="input-field col s12">
@@ -138,8 +138,10 @@ Login.propTypes = {
     auth: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
 };
+
 const mapStateToProps = (state) => ({
     auth: state.auth,
     errors: state.errors
 });
+
 export default connect(mapStateToProps, { loginUser })(Login);
