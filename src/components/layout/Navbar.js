@@ -14,7 +14,7 @@ class Navbar extends Component {
                             }}
                             className="col s5 brand-logo center black-text"
                         >
-                            <i class="fas fa-leaf    "></i>
+                            <i className="fas fa-leaf    "></i>
                             GAIA.ai
                         </Link>
                     </div>

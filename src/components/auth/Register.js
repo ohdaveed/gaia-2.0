@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
 
-
 class Register extends Component {
     constructor() {
         super();
@@ -47,8 +46,6 @@ class Register extends Component {
             password2: this.state.password2
         };
 
-        console.log(newUser);
-
         this.props.registerUser(newUser, this.props.history);
     };
     render() {
@@ -83,15 +80,16 @@ class Register extends Component {
                                     onChange={this.onChange}
                                     value={this.state.username}
                                     error={errors.username}
-                                    id="name"
+                                    id="username"
                                     type="text"
                                     className={classnames("", {
                                         invalid: errors.username
                                     })}
                                 />
-                                <label htmlFor="username"> User Name </label>{" "}
+                                <label htmlFor="username"> User Name </label>
                                 <span className="red-text">{errors.name}</span>
-                            </div>{" "}
+                            </div>
+
                             <div className="input-field col s12">
                                 <input
                                     onChange={this.onChange}
