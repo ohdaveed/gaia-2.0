@@ -16,6 +16,7 @@ export const registerUser = (userData, history) => (dispatch) => {
 };
 // Login - get user token
 export const loginUser = (userData) => (dispatch) => {
+    console.log(userData)
     axios
         .post("http://localhost:5000/api/users/login", userData)
         .then((res) => {

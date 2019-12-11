@@ -9,7 +9,7 @@ class Login extends Component {
     constructor() {
         super();
         this.state = {
-            username: "",
+            email: "",
             password: "",
             errors: {}
         };
@@ -39,7 +39,7 @@ class Login extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const userData = {
-            username: this.state.username,
+            email: this.state.email,
             password: this.state.password
         };
 
@@ -73,20 +73,20 @@ class Login extends Component {
                             <div className="input-field col s12">
                                 <input
                                     onChange={this.onChange}
-                                    value={this.state.username}
-                                    error={errors.username}
-                                    id="username"
-                                    type="text"
+                                    value={this.state.email}
+                                    error={errors.email}
+                                    id="email"
+                                    type="email"
                                     className={classnames("", {
                                         invalid:
-                                            errors.username ||
-                                            errors.usernotfound
+                                            errors.email ||
+                                            errors.emailnotfound
                                     })}
                                 />
-                                <label htmlFor="username">User Name</label>
+                                <label htmlFor="email">E-mail</label>
                                 <span className="red-text">
-                                    {errors.username}
-                                    {errors.usernotfound}
+                                    {errors.email}
+                                    {errors.emailnotfound}
                                 </span>
                             </div>
                             <div className="input-field col s12">
