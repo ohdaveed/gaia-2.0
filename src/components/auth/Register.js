@@ -4,7 +4,7 @@ class Register extends Component {
     constructor() {
         super();
         this.state = {
-            name: "",
+            username: "",
             email: "",
             password: "",
             password2: "",
@@ -17,7 +17,7 @@ class Register extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const newUser = {
-            name: this.state.name,
+            name: this.state.username,
             email: this.state.email,
             password: this.state.password,
             password2: this.state.password2
@@ -52,12 +52,12 @@ class Register extends Component {
                             <div className="input-field col s12">
                                 <input
                                     onChange={this.onChange}
-                                    value={this.state.name}
-                                    error={errors.name}
+                                    value={this.state.username}
+                                    error={errors.username}
                                     id="name"
                                     type="text"
                                 />
-                                <label htmlFor="name">Name</label>
+                                <label htmlFor="username">User Name</label>
                             </div>
                             <div className="input-field col s12">
                                 <input
